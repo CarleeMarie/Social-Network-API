@@ -4,7 +4,7 @@ const user = new mongoose.Schema({
     email: { type: String, required: true },
     thoughts: { [
         { _id: this.Thought}
-    ]}
+    ]},
     friends: { {
         { user._id: }
     }}
