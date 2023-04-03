@@ -1,3 +1,6 @@
+
+
+
 app.get //all thoughts
 
 app.get // a single thought by _id 
