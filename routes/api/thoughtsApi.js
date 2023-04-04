@@ -1,12 +1,20 @@
+const router = require('express').Router();
+const {
+  getAllThoughts,
+  getSingleThought,
+  createThought,
+  updateThought,
+  deleteThought,
+} = require('../../controllers/thoughtsController'); 
 
+// Get users
+router.route('/').get(getAllThoughts).post(createThought);
 
+// Get single user by _id
+router
+  .route('/:thoughtId')
+  .get(getSingleThought)
+  .put(updateThought)
+  .delete(deleteThought);
 
-app.get //all thoughts
-
-app.get // a single thought by _id 
-
-app.post // a new thought - create using Insomnia
-
-app.put // update a thought by its _id
-
-app.delete // remove a thought by its _id
+module.exports = router;
