@@ -33,7 +33,7 @@ module.exports = {
     )
       .then((user) =>
         !user
-          ? res.status(404).json({ message: "No application with this id." })
+          ? res.status(404).json({ message: "No user with that id." })
           : res.json(user)
       )
       .catch((err) => {
