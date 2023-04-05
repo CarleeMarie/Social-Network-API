@@ -41,7 +41,7 @@ module.exports = {
         res.status(500).json(err);
       });
   },
-// TODO Delete thought Q: where does the thoughtId come from??
+// Delete thought
   deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thoughts) =>
